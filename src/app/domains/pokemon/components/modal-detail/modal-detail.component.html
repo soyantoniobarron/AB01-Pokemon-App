@@ -1,0 +1,23 @@
+<mat-card class="pokemon-card" appearance="outlined">
+    <div class="pokemon-card-image-container">
+        <img mat-card-image class="pokemon-card-image" [src]="data.imgs.artwork" alt="">
+    </div>
+    <mat-card-header class="pokemon-card-header">
+        <div mat-card-avatar class="pokemon-card-avatar"
+            [style.background-image]="'url('+ data.imgs.animated + ')'"></div>
+        <mat-card-title>{{ data.id }}. {{ data.name | titlecase }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="pokemon-card-content">
+        <p>
+            <b>Type:</b> {{ data.types | arrayToString | titlecase }}.<br>
+            <b>Weight:</b> {{ data.weight }} hectograms.<br>
+            <b>Height:</b> {{ data.height }} decimetres.<br>
+            <b>Abilities:</b> {{ data.abilities | arrayToString | titlecase }}.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button extended class="mx-4 my-2 w-100" (click)="closeDialog()">
+            <mat-icon>close</mat-icon>Close
+        </button>
+    </mat-card-actions>
+</mat-card>
