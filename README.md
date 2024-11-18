@@ -1,14 +1,80 @@
 # PokemonApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+This project was generated with Angular CLI version 18.2.11.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To get started, follow these steps:
 
-## Code scaffolding
+1. **Install Angular CLI**:
+   - If you haven't installed Angular CLI yet, you can do so via **Node.js and npm** or **Homebrew**:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+     - **Using npm**:
+       ```bash
+       npm install -g @angular/cli
+       ```
+
+     - **Using Homebrew** (for macOS users):
+       ```bash
+       brew install angular-cli
+       ```
+
+2. **Clone the repository**:
+   - Clone the repository to your local machine:
+     ```bash
+     git clone https://github.com/your-repo/pokemon-app.git
+     cd pokemon-app
+     ```
+
+3. **Install dependencies**:
+   - Once inside the project folder, install the required dependencies:
+     ```bash
+     npm install
+     ```
+
+## Running the Application
+
+After installation, follow these steps to run the application:
+
+1. **Start the development server**:
+   - To launch the app locally, run:
+     ```bash
+     ng serve
+     ```
+
+2. **Navigate to the application**:
+   - Open your browser and visit:
+     ```
+     http://localhost:4200/
+     ```
+
+   - The application will automatically reload if you make changes to any of the source files.
+
+## Additional Features
+
+The application has several key features:
+
+- **Card View for Listing**: The list of Pokemons is displayed in a card format, offering a more visually appealing way to browse the data.
+  
+- **State Management with Signal**: Pokemon data is stored and managed using **Signal**, ensuring a smooth state management system across the app.
+
+- **Error Messages in Full-Screen**: Any error messages are displayed in a full-screen modal, ensuring that users notice and address any issues.
+
+- **Pokemon Search**: The application allows users to search for Pokémon based on the following parameters:
+  - **ID**
+  - **Name**
+  - **Type**
+  - **Weight**
+  - **Abilities**
+
+## Code Scaffolding
+
+To generate a new component, service, directive, pipe, or other elements, you can use the following commands:
+
+- Generate a new component:
+  ```bash
+  ng generate component component-name
+  ```
 
 ## Build
 
