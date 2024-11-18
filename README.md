@@ -22,8 +22,8 @@ To get started, follow these steps:
 2. **Clone the repository**:
    - Clone the repository to your local machine:
      ```bash
-     git clone https://github.com/your-repo/pokemon-app.git
-     cd pokemon-app
+     git clone https://github.com/soyantoniobarron/AB01-Pokemon-App.git
+     cd AB01-Pokemon-App
      ```
 
 3. **Install dependencies**:
