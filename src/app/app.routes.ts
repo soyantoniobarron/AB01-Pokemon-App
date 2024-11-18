@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
-import { ListComponent } from './domains/pokemon/pages/list/list.component';
+import { HomeComponent } from './domains/pokemon/pages/home/home.component';
+
 
 export const routes: Routes = [
     {
         path: '',
-        component: ListComponent
+        component: HomeComponent
     },
 ];

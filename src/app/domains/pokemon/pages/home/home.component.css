@@ -1,0 +1,47 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-list,
+.error-message-box {
+    flex: 1;
+}
+
+.error-message-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-icon, .error-message {
+    color: #AA2256;
+}
+
+.error-message {
+    margin-top: 10px;
+}
+
+
+.toolbar {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.search-full-width {
+    width: 100%;
+}
+
+:host ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+}

@@ -1,0 +1,49 @@
+<div class="page">
+    <mat-toolbar class="toolbar">
+        <form class="search-form">
+            <mat-form-field class="search-full-width">
+                <mat-label>Search a Pokemon</mat-label>
+                <input
+                    type="search"
+                    matInput
+                    placeholder="Search by number, name, type, weight or abilities."
+                    (input)="searchHandler($event)"
+                >
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </form>
+    </mat-toolbar>
+    
+    <div 
+        class="container pokemon-list mt-lg-5 mt-md-4 mt-3 mb-5"
+        *ngIf="!pageError()"
+    >
+        <div class="row">
+            <div
+                class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+                *ngFor="let pokemon of pokemonPage()"
+            >
+                <app-row [pokemon]="pokemon"/>
+            </div>
+        </div>
+    </div>
+
+    <div 
+        class="container error-message-box"
+        *ngIf="pageError()"
+    >
+        <mat-icon class="error-icon" fontIcon="info"></mat-icon>
+        <p class="error-message">{{ errorTitle() }}</p>
+    </div>
+
+    <mat-paginator
+        #paginator
+        class="sticky-paginator"
+        [length]="listLength()"
+        [pageSize]="pageSize()"
+        [pageSizeOptions]="[12, 24, 36]"
+        aria-label="Select page"
+        (page)="onPageChange($event)"
+    >
+    </mat-paginator>
+</div>

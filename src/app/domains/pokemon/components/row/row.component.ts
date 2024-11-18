@@ -1,27 +1,25 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatListModule } from '@angular/material/list';
+// Components
+import { ModalDetailComponent } from '../modal-detail/modal-detail.component';
+// Models
+import { Pokemon } from '../../../shared/models/pokemon.model';
+// Pipes
+import { ArrayToStringPipe } from '../../../shared/pipes/array-to-string.pipe';
+// Services
+// Angular Material
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-
 import { MatCardModule } from '@angular/material/card';
-
-import { MatGridListModule } from '@angular/material/grid-list';
-import { ArrayToStringPipe } from '../../../shared/pipes/array-to-string.pipe';
-
 import { MatDialog } from '@angular/material/dialog';
-import { ModalDetailComponent } from '../modal-detail/modal-detail.component';
 
-import { Pokemon } from '../../../shared/models/pokemon.model';
 
 @Component({
   selector: 'app-row',
   standalone: true,
   imports: [
-    MatListModule,
     MatIconModule,
     MatCardModule,
-    MatGridListModule,
     MatButtonModule,
     CommonModule,
     ArrayToStringPipe
@@ -53,11 +51,6 @@ export class RowComponent {
     this.dialog.open(ModalDetailComponent, {
       data: this.pokemon
     });
-  }
-
-  addToCartHandeler() {
-    console.log('Click from child');
-    this.addToCart.emit('Mensaje desde el hijo: ' + this.pokemon.name);
   }
 
 }
