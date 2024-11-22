@@ -142,6 +142,7 @@ export class HomeComponent {
       item.id == parseInt(value) ||
       item.name.includes(value.toLowerCase()) ||
       item.weight == value ||
+      item.height == value ||
       item.types.some((type: any) => type.includes(value.toLowerCase())) ||
       item.abilities.some((ability: any) => ability.includes(value.toLowerCase()))
     );
